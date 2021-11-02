@@ -27,6 +27,17 @@ public class BankAccount {
 		}
 		
 	}
+	public void transfer(BankAccount user, double money ) {
+		
+		if(user==this) {
+			return;
+		}
+		else {
+			user.withdraw(money);
+			this.deposit(money);
+		}
+		
+	}
 	
 
 }
